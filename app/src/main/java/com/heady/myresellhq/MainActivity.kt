@@ -31,10 +31,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.platforms -> Toast.makeText(applicationContext, "Clicked Platforms", Toast.LENGTH_SHORT).show()
                 R.id.settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
                 R.id.about -> Toast.makeText(applicationContext, "Clicked About", Toast.LENGTH_SHORT).show()
-
             }
             true
         }
+
+
     }
 
 

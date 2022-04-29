@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyResellHQ">
         <activity
-            android:name=".ui.WelcomeScreen"
+            android:name=".ui.Register"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LogIn"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
