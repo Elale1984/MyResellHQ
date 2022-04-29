@@ -1,11 +1,11 @@
 package com.heady.myresellhq.ui
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import com.heady.myresellhq.R
-import com.heady.myresellhq.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.heady.myresellhq.databinding.ActivityWelcomeScreenBinding
+
 
 class WelcomeScreen : AppCompatActivity() {
 
@@ -19,6 +19,8 @@ class WelcomeScreen : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
             Toast.makeText(this, "Sign In Clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LogIn::class.java)
+            startActivity(intent)
         }
 
         binding.btnRegister.setOnClickListener {

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/activity_log_in.xml" value="0.3582427536231884" />
         <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/activity_main.xml" value="0.13796296296296295" />
+        <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/activity_register.xml" value="0.3582427536231884" />
         <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/activity_welcome_screen.xml" value="0.3582427536231884" />
         <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/fragment_login.xml" value="0.3484375" />
         <entry key="..\:/MyAndroid/MyResellHQ/app/src/main/res/layout/nav_header.xml" value="0.25" />
