@@ -24,7 +24,10 @@ class WelcomeScreen : AppCompatActivity() {
         }
 
         binding.btnRegister.setOnClickListener {
+
             Toast.makeText(this, "Sign Up Clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
         }
 
 
