@@ -19,4 +19,6 @@
     <string name="last_name">Last Name</string>
     <string name="re_enter_password">Re-Enter Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="sign_up2">Sign Up?</string>
+    <string name="welcome_back">WELCOME BACK</string>
 </resources>
