@@ -37,6 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvWelcomeBack">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorLink="#39FF14" />
@@ -59,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/otfEmail">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMagicWord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
