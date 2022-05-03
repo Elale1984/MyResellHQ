@@ -1,15 +1,17 @@
 package com.heady.myresellhq.ui
 
+import android.R.attr.password
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.heady.myresellhq.MainActivity
-import com.heady.myresellhq.R
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.heady.myresellhq.databinding.ActivityRegisterBinding
+
 
 class Register : AppCompatActivity() {
 
+    private lateinit var mAuth: FirebaseAuth
     private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +19,10 @@ class Register : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mAuth = FirebaseAuth.getInstance()
+
         binding.btnSignUp.setOnClickListener {
-            Toast.makeText(this, "Sign Up Clicked", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, LogIn::class.java)
-            startActivity(intent)
+            createAccount()
         }
 
         binding.tbtnSignIn.setOnClickListener {
@@ -28,5 +30,29 @@ class Register : AppCompatActivity() {
             val intent = Intent(this, LogIn::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun createAccount() {
+
+        val email = binding.etEmail.text
+        val password = binding.etMagicWord.text
+
+        mAuth.createUserWithEmailAndPassword(email.toString(), password.toString())
+            .addOnCompleteListener(
+                this
+            ) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+
+                    val user = mAuth.currentUser
+
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(
+                        this, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
     }
 }

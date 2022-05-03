@@ -2,18 +2,11 @@ package com.heady.myresellhq.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 import com.heady.myresellhq.MainActivity
-import com.heady.myresellhq.R
 import com.heady.myresellhq.databinding.ActivityLogInBinding
-import com.heady.myresellhq.databinding.ActivityWelcomeScreenBinding
-
 
 class LogIn : AppCompatActivity() {
 
@@ -31,21 +24,20 @@ class LogIn : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-
+        // user logs in
         binding.btnSignIn.setOnClickListener {
             login()
         }
 
+        // user navigated to registration page
         binding.tbtnSignUp.setOnClickListener {
-            Toast.makeText(this, "Sign Un Clicked", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
 
-
-
     }
 
+    // checking to see if the user is still logged in
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -57,9 +49,11 @@ class LogIn : AppCompatActivity() {
         }
     }
 
+
+    // Login function uses the firebase auth checking method for validation
     private fun login() {
-        var email = binding.etEmail.text
-        var password = binding.etMagicWord.text
+        val email = binding.etEmail.text
+        val password = binding.etMagicWord.text
         mAuth.signInWithEmailAndPassword(email.toString(),password.toString()).addOnCompleteListener { task ->
             if(task.isSuccessful){
                 val intent= Intent(this,MainActivity::class.java)
