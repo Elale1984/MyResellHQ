@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.heady.myresellhq.MainActivity
 import com.heady.myresellhq.databinding.ActivityLogInBinding
 
 class LogIn : AppCompatActivity() {
@@ -56,7 +55,7 @@ class LogIn : AppCompatActivity() {
         val password = binding.etMagicWord.text
         mAuth.signInWithEmailAndPassword(email.toString(),password.toString()).addOnCompleteListener { task ->
             if(task.isSuccessful){
-                val intent= Intent(this,MainActivity::class.java)
+                val intent= Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }

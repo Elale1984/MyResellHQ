@@ -1,31 +1,37 @@
-package com.heady.myresellhq
+package com.heady.myresellhq.ui
 
+import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.heady.myresellhq.R
 import com.heady.myresellhq.databinding.ActivityMainBinding
-import com.heady.myresellhq.ui.LogIn
-import com.heady.myresellhq.ui.WelcomeScreen
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
 
-    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var binding: ActivityMainBinding
+    private lateinit var databaseReference: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         mAuth = FirebaseAuth.getInstance()
+        val uid = mAuth.currentUser?.uid
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users")
+
 
         binding.navView.itemIconTintList = null
 
@@ -34,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
 
         binding.navView.setNavigationItemSelectedListener {
@@ -64,4 +72,6 @@ class MainActivity : AppCompatActivity() {
             return true
         return super.onOptionsItemSelected(item)
     }
+
+
 }
