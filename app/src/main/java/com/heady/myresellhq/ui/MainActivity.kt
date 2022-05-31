@@ -13,6 +13,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.heady.myresellhq.R
 import com.heady.myresellhq.databinding.ActivityMainBinding
+import com.heady.myresellhq.ui.fragments.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,16 +43,57 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
+        val dashboardUIFragment = DashboardUI()
+        val notificationsUIFragment = NotificationsUI()
+        val inventoryUIFragment = InventoryUI()
+        val statsUIFragment = StatsUI()
+        val settingsUIFragment = SettingsUI()
+        val aboutUIFragment = AboutUI()
+
+        // set initial fragment to container
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.currentFragment, dashboardUIFragment)
+            commit()
+        }
 
 
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.menu_dashboard -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
-                R.id.menu_notifications -> Toast.makeText(applicationContext, "Clicked Notifications", Toast.LENGTH_SHORT).show()
-                R.id.menu_stats -> Toast.makeText(applicationContext, "Clicked Stats", Toast.LENGTH_SHORT).show()
-                R.id.menu_inventory -> Toast.makeText(applicationContext, "Clicked Platforms", Toast.LENGTH_SHORT).show()
-                R.id.menu_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
-                R.id.menu_about -> Toast.makeText(applicationContext, "Clicked about", Toast.LENGTH_SHORT).show()
+                R.id.menu_dashboard ->
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, dashboardUIFragment)
+                        commit()
+                    }
+                R.id.menu_notifications ->
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, notificationsUIFragment)
+                        commit()
+                    }
+                R.id.menu_stats ->
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, statsUIFragment)
+                        commit()
+                    }
+                R.id.menu_inventory ->
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, inventoryUIFragment)
+                        commit()
+                    }
+                R.id.menu_settings ->
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, settingsUIFragment)
+                        commit()
+                    }
+                R.id.menu_about ->
+
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.currentFragment, aboutUIFragment)
+                        commit()
+                    }
                 R.id.menu_signOut -> {
                     Toast.makeText(applicationContext, "Goodbye", Toast.LENGTH_SHORT).show()
                     mAuth.signOut()
