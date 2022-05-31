@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "170685121475",
+    "firebase_url": "https://resellhq-1c93d-default-rtdb.firebaseio.com",
+    "project_id": "resellhq-1c93d",
+    "storage_bucket": "resellhq-1c93d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170685121475:android:eaaf952f4a70148952b376",
+        "android_client_info": {
+          "package_name": "com.heady.myresellhq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170685121475-mnque1jfrte9ngp6q2639it7gvu7d2gh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiwSYoczrYO9Yn4FCnQp_1VCNYQrOhnso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170685121475-mnque1jfrte9ngp6q2639it7gvu7d2gh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
