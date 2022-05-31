@@ -7,39 +7,39 @@
 
     <item
         android:id="@+id/menu_dashboard"
-        android:title="My Dashboard"
+        android:title="@string/my_dashboard"
         android:icon="@drawable/ic_home"/>
 
     <item
         android:id="@+id/menu_notifications"
-        android:title="My Notifications"
+        android:title="@string/my_notifications"
         android:icon="@drawable/ic_notifications"/>
 
 
     <item
         android:id="@+id/menu_stats"
-        android:title="My Stats"
+        android:title="@string/my_stats"
         android:icon="@drawable/ic_stats"/>
 
     <item
         android:id="@+id/menu_inventory"
-        android:title="My Inventory"
+        android:title="@string/my_inventory"
         android:icon="@drawable/ic_inventory"/>
 
     <group android:id="@+id/grp_app_menu">
 
         <item
             android:id="@+id/menu_settings"
-            android:title="Settings"
+            android:title="@string/settings"
             android:icon="@drawable/ic_settings"/>
 
         <item
             android:id="@+id/menu_about"
-            android:title="About"
+            android:title="@string/about"
             android:icon="@drawable/ic_about"/>
         <item
             android:id="@+id/menu_signOut"
-            android:title="About"
+            android:title="@string/signout"
             android:icon="@drawable/ic_logout"/>
 
     </group>

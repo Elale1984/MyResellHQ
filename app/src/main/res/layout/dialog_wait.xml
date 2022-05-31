@@ -11,15 +11,15 @@
         android:id="@+id/txtWait"
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
-        android:text="Please Wait..."
-        android:textSize="10sp"
+        android:text="@string/please_wait"
+        android:textSize="12sp"
         />
 
     <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
         android:id="@+id/pbWaitBar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/txtWait"
         gbp:type="folding_circles"/>

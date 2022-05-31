@@ -13,7 +13,6 @@ class WelcomeScreen : AppCompatActivity() {
 
     private lateinit var binding:ActivityWelcomeScreenBinding
 
-    private lateinit var mAuth: FirebaseAuth
     private lateinit var authListener: AuthStateListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
