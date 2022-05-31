@@ -46,13 +46,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
-                R.id.notifications -> Toast.makeText(applicationContext, "Clicked Notifications", Toast.LENGTH_SHORT).show()
-                R.id.stats -> Toast.makeText(applicationContext, "Clicked Stats", Toast.LENGTH_SHORT).show()
-                R.id.platforms -> Toast.makeText(applicationContext, "Clicked Platforms", Toast.LENGTH_SHORT).show()
-                R.id.settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
-                R.id.about -> Toast.makeText(applicationContext, "Clicked about", Toast.LENGTH_SHORT).show()
-                R.id.logout -> {
+                R.id.menu_dashboard -> Toast.makeText(applicationContext, "Clicked Home", Toast.LENGTH_SHORT).show()
+                R.id.menu_notifications -> Toast.makeText(applicationContext, "Clicked Notifications", Toast.LENGTH_SHORT).show()
+                R.id.menu_stats -> Toast.makeText(applicationContext, "Clicked Stats", Toast.LENGTH_SHORT).show()
+                R.id.menu_inventory -> Toast.makeText(applicationContext, "Clicked Platforms", Toast.LENGTH_SHORT).show()
+                R.id.menu_settings -> Toast.makeText(applicationContext, "Clicked Settings", Toast.LENGTH_SHORT).show()
+                R.id.menu_about -> Toast.makeText(applicationContext, "Clicked about", Toast.LENGTH_SHORT).show()
+                R.id.menu_signOut -> {
                     Toast.makeText(applicationContext, "Goodbye", Toast.LENGTH_SHORT).show()
                     mAuth.signOut()
                     val logoutIntent = Intent(this, WelcomeScreen::class.java)

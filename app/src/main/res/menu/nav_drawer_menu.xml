@@ -6,38 +6,42 @@
 
 
     <item
-        android:id="@+id/home"
-        android:title="Home"
+        android:id="@+id/menu_dashboard"
+        android:title="My Dashboard"
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/notifications"
-        android:title="Notifications"
+        android:id="@+id/menu_notifications"
+        android:title="My Notifications"
         android:icon="@drawable/ic_notifications"/>
 
 
     <item
-        android:id="@+id/stats"
-        android:title="Stats"
+        android:id="@+id/menu_stats"
+        android:title="My Stats"
         android:icon="@drawable/ic_stats"/>
 
     <item
-        android:id="@+id/platforms"
-        android:title="Platforms"
-        android:icon="@drawable/ic_platforms"/>
+        android:id="@+id/menu_inventory"
+        android:title="My Inventory"
+        android:icon="@drawable/ic_inventory"/>
 
-    <item
-        android:id="@+id/settings"
-        android:title="Settings"
-        android:icon="@drawable/ic_settings"/>
+    <group android:id="@+id/grp_app_menu">
 
-    <item
-        android:id="@+id/about"
-        android:title="About"
-        android:icon="@drawable/ic_about"/>
+        <item
+            android:id="@+id/menu_settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings"/>
 
-    <item
-        android:id="@+id/logout"
-        android:title="Sign Out"
-        android:icon="@drawable/ic_logout"/>
+        <item
+            android:id="@+id/menu_about"
+            android:title="About"
+            android:icon="@drawable/ic_about"/>
+        <item
+            android:id="@+id/menu_signOut"
+            android:title="About"
+            android:icon="@drawable/ic_logout"/>
+
+    </group>
+
 </menu>
